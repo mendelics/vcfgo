@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/brentp/irelate/interfaces"
+	"github.com/mendelics/irelate/interfaces"
 )
 
 // Variant holds the information about a single site. It is analagous to a row in a VCF file.

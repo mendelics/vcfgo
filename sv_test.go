@@ -4,7 +4,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/brentp/vcfgo"
+	"github.com/mendelics/vcfgo"
 
 	. "gopkg.in/check.v1"
 )

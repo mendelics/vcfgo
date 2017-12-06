@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/brentp/vcfgo"
+	"github.com/mendelics/vcfgo"
 )
 
 func Example() {

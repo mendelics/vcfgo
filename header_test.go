@@ -4,8 +4,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/brentp/irelate/interfaces"
-	vcfgo "github.com/brentp/vcfgo"
+	"github.com/mendelics/irelate/interfaces"
+	vcfgo "github.com/mendelics/vcfgo"
 
 	. "gopkg.in/check.v1"
 )
@@ -128,7 +128,7 @@ func (s *HeaderSuite) TestSamples(c *C) {
 	c.Assert(chromCount["20"], Equals, 4)
 	c.Assert(chromCount["X"], Equals, 1)
 
-	c.Assert(int(variants[len(variants) - 1].Pos), Equals, int(153171993))
+	c.Assert(int(variants[len(variants)-1].Pos), Equals, int(153171993))
 	c.Assert(variants[3].Filter, Equals, "PASS")
 }
 
@@ -170,10 +170,10 @@ func (s *HeaderSuite) TestSampleGenotypes(c *C) {
 
 	// validate triploid parsing works
 	tripVariant := variants[6]
-	c.Assert(tripVariant.Samples[0].GT, DeepEquals, []int{0,0,0})
+	c.Assert(tripVariant.Samples[0].GT, DeepEquals, []int{0, 0, 0})
 	c.Assert(tripVariant.Samples[0].Phased, Equals, true)
 
-	c.Assert(tripVariant.Samples[1].GT, DeepEquals, []int{1,0,1})
+	c.Assert(tripVariant.Samples[1].GT, DeepEquals, []int{1, 0, 1})
 	c.Assert(tripVariant.Samples[1].Phased, Equals, false)
 
 	c.Assert(tripVariant.Samples[2].GT, DeepEquals, []int{-1})
